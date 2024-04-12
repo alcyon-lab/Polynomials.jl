@@ -1,5 +1,8 @@
 module Polynomials
 
-# Write your package code here.
+include("Types.jl")
+include("CombinationOfRationalFunctions.jl")
+
+export CombinationOfRationalFunctions, get_ratfun, subs
 
 end
