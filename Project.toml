@@ -1,0 +1,7 @@
+name = "Polynomials"
+uuid = "40aba029-825d-41bd-a97e-db86442ba04f"
+authors = ["Alcyon Lab"]
+version = "1.0.0"
+
+[compat]
+julia = "1.2"
