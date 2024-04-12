@@ -1,8 +1,8 @@
 module Polynomials
 
-include("Types.jl")
+include("Polynomial.jl")
 include("CombinationOfRationalFunctions.jl")
 
-export CombinationOfRationalFunctions, get_ratfun, subs
+export CombinationOfRationalFunctions, Polynomial, get_ratfun, subs, create_monomial_from_exponents
 
 end
