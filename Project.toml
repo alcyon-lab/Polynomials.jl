@@ -7,4 +7,5 @@ version = "1.0.1-DEV"
 AbstractAlgebra = "c3fe647b-3220-5bb0-a1ea-a7954cac585d"
 
 [compat]
+AbstractAlgebra = "0.40"
 julia = "1.2"
