@@ -61,6 +61,16 @@ function simplify(c::CombinationOfRationalFunctions)
     sum([n / d for (n, d) in c.ratfuns])
 end
 
+function evaluate(c::CombinationOfRationalFunctions)
+    R = [n / d for (n, d) in c.ratfuns]
+    return Symbolics.simplify(sum([r for r in R]))
+end
+
+function evaluate(c::CombinationOfRationalFunctions, values::Union{Dict,Pair})
+    R = [n / d for (n, d) in c.ratfuns]
+    return Symbolics.substitute(Symbolics.simplify(sum([r for r in R])), values)
+end
+
 function subs(c::CombinationOfRationalFunctions, v::Vector)
     R = [n / d for (n, d) in c.ratfuns]
     return sum([r(v) for r in R])
