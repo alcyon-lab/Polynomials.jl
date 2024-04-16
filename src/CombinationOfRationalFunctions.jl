@@ -58,7 +58,7 @@ function get_ratfun(c::CombinationOfRationalFunctions)
 end
 
 function simplify(c::CombinationOfRationalFunctions)
-    sum([n / d for (n, d) in c.ratfuns])
+    return Symbolics.simplify(sum([n / d for (n, d) in c.ratfuns]))
 end
 
 function evaluate_all_with(c::CombinationOfRationalFunctions, num_of_variables::Int, val::Any)
