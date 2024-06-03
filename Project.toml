@@ -1,7 +1,7 @@
 name = "Polynomials"
 uuid = "40aba029-825d-41bd-a97e-db86442ba04f"
 authors = ["Alcyon Lab"]
-version = "1.0.8-DEV"
+version = "1.0.9-DEV"
 
 [deps]
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
