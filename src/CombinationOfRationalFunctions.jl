@@ -61,9 +61,8 @@ function simplify(c::CombinationOfRationalFunctions)
     return Symbolics.simplify(sum([n / d for (n, d) in c.ratfuns]))
 end
 
-function evaluate_all_with(c::CombinationOfRationalFunctions, num_of_variables::Int, val::Any)
-    x = get_variable_array(num_of_variables)
-    return evaluate(c, Dict([x[i] => val for i in eachindex(x)]))
+function evaluate_all_with(c::CombinationOfRationalFunctions, variables::Vector, val::Any)
+    return evaluate(c, Dict([x[i] => val for i in eachindex(variables)]))
 end
 
 function evaluate(c::CombinationOfRationalFunctions)

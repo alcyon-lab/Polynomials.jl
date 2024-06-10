@@ -13,6 +13,4 @@ export
     evaluate,
     evaluate_all_with,
     simplify
-
-
 end
