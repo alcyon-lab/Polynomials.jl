@@ -62,7 +62,7 @@ function simplify(c::CombinationOfRationalFunctions)
 end
 
 function evaluate_all_with(c::CombinationOfRationalFunctions, variables::Vector, val::Any)
-    return evaluate(c, Dict([x[i] => val for i in eachindex(variables)]))
+    return evaluate(c, Dict([variables[i] => val for i in eachindex(variables)]))
 end
 
 function evaluate(c::CombinationOfRationalFunctions)
